@@ -13,9 +13,13 @@
     "@prismicio/client": "^7.5.0",
     "@prismicio/next": "^1.6.0",
     "@prismicio/react": "^2.8.0",
+    "@react-three/drei": "^9.106.0",
+    "@react-three/fiber": "^8.16.7",
+    "@types/three": "^0.165.0",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "three": "^0.165.0"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.40",
