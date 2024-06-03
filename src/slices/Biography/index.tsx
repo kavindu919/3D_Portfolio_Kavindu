@@ -1,4 +1,4 @@
-import Avatar from "@/components/Avatar";
+import Avatar from "./Avatar";
 import Bounded from "@/components/Bounded";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
@@ -26,7 +26,8 @@ const Biography = ({ slice }: BiographyProps): JSX.Element => {
         </Heading>
 
         <div className="prose prose-xl prose-slate prose-invert col-start-1">
-          <PrismicRichText field={slice.primary.body} />
+          {/* <PrismicRichText field={slice.primary.body} /> */}
+          <PrismicRichText field={slice.primary.description} />
         </div>
         <Button
           linkField={slice.primary.button_link}
