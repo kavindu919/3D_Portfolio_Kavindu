@@ -27,7 +27,7 @@ export default function ContentList({
   const [currentItem, setCurrentItem] = useState<null | number>(null);
   const lastMousePos = useRef({ x: 0, y: 0 });
 
-  const urlPrefix = contentType === "Blogs" ? "/blog" : "/project";
+  const urlPrefix = contentType === "Blogs" ? "/blog" : "/projects";
 
   useEffect(() => {
     // Animate list-items in with a stagger
