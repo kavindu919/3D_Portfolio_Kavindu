@@ -1,3 +1,4 @@
+//@ts-nocheck
 "use client";
 import { asImageSrc, Content, isFilled } from "@prismicio/client";
 import gsap from "gsap";

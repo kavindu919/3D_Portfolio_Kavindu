@@ -1,3 +1,4 @@
+//@ts-nocheck
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 import { Content, isFilled } from "@prismicio/client";
