@@ -35,7 +35,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             duration: 1,
             transformOrigin: "left top",
             stagger: { each: 0.1, from: "random" },
-          }
+          },
         )
         .fromTo(
           ".job-title",
@@ -50,7 +50,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             duration: 1,
             scale: 1,
             ease: "elastic.out(1,0.3)",
-          }
+          },
         );
     }, component);
     return () => ctx.revert();
@@ -61,7 +61,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     return name.split("").map((letter, index) => (
       <span
         key={index}
-        className={`name-animation name-animation-${key}-index inline-block opacity-0 `}
+        className={`name-animation name-animation-${key}-index inline-block opacity-0`}
       >
         {letter}
       </span>
@@ -73,20 +73,20 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
       ref={component}
     >
-      <div className="grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center">
+      <div className="grid min-h-[70vh] grid-cols-1 items-center md:grid-cols-2">
         <Shapes />
         <div className="col-start-1 md:row-start-1">
           <h1
             className="mb-8 text-[clamp(3rem,20vmin,20rem)] font-bold leading-none tracking-tighter"
             aria-label={slice.primary.firstname + " " + slice.primary.lastname}
           >
-            <span className="block text-slate-300">
+            <span className="block text-[#83B4FF]">
               {renderLetters(slice.primary.firstname, "first")}
             </span>
-            <span className="-mt-[.2em] block text-slate-500">
+            <span className="-mt-[.2em] block text-[#FDFFE2]">
               {renderLetters(slice.primary.lastname, "last")}
             </span>
-            <span className="job-title block bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-500 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 md:text-4xl mt-6">
+            <span className="job-title mt-6 block bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-500 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 md:text-4xl">
               {slice.primary.tagline}
             </span>
           </h1>
