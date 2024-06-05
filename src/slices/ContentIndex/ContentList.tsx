@@ -27,7 +27,7 @@ export default function ContentList({
   const [currentItem, setCurrentItem] = useState<null | number>(null);
   const lastMousePos = useRef({ x: 0, y: 0 });
 
-  const urlPrefix = contentType === "Blogs" ? "/blog" : "/projects";
+  const urlPrefix = contentType === "Blog" ? "/blog" : "/projects";
 
   useEffect(() => {
     // Animate list-items in with a stagger
@@ -51,7 +51,7 @@ export default function ContentList({
               end: "bottom center",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       });
 
@@ -141,20 +141,20 @@ export default function ContentList({
             {isFilled.keyText(item.data.title) && (
               <li
                 key={index}
-                className="list-item opacity-0f"
+                className="opacity-0f list-item"
                 onMouseEnter={() => onMouseEnter(index)}
                 ref={(el) => (itemsRef.current[index] = el)}
               >
                 <Link
                   href={urlPrefix + "/" + item.uid}
-                  className="flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row "
+                  className="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
                   aria-label={item.data.title || ""}
                 >
                   <div className="flex flex-col">
                     <span className="text-3xl font-bold">
                       {item.data.title}
                     </span>
-                    <div className="flex gap-3 text-yellow-400 text-lg font-bold">
+                    <div className="flex gap-3 text-lg font-bold text-yellow-400">
                       {item.tags.map((tag, index) => (
                         <span key={index}>{tag}</span>
                       ))}
